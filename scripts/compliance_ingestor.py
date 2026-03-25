@@ -45,6 +45,12 @@ def scan_compliance_files():
     else:
         print(f"🚀 共找到 {document_count} 份源文件，准备进行 GraphRAG 处理。")
 
-if __name__ == "__main__":
+def main():
+    """这里是脚本独立运行时的入口"""
+    print("🚀 正在以独立模式运行合规文档导入工具...")
     setup_compliance_environment()
     scan_compliance_files()
+
+if __name__ == "__main__":
+    # 只有直接运行本文件时，才会执行 main()
+    main()
